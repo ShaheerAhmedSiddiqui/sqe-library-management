@@ -2,6 +2,7 @@ class Student {
     constructor(name) {
         this.name = name;
         this.scores = [];
+        this.student_id = 109;
     }
 
     // Add score

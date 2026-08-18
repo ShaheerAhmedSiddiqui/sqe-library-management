@@ -23,4 +23,8 @@ class Student {
     }
 
     
+    //docstring
+    get_info() {
+        return `${this.name} - Average: ${this.get_average()}`;
+    }
 }

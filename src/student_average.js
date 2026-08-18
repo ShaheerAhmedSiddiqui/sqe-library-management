@@ -6,6 +6,9 @@ class Student {
 
     // Add score
     add_score(score) {
+         if (score < 0) {
+            throw new Error("Score cannot be negative");
+        }
         this.scores.push(score);
     }
 

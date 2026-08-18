@@ -1,16 +1,30 @@
-function calculateAverage(marks) {
-    if (!marks || marks.length === 0) {
-        return 0;
+class Student {
+    constructor(name) {
+        this.name = name;
+        this.scores = [];
     }
 
-    const total = marks.reduce((sum, mark) => sum + mark, 0);
-    return total / marks.length;
+    // Add score
+    add_score(score) {
+        //validation
+        if (score < 0) {
+            throw new Error("Score cannot be negative");
+        }
+        this.scores.push(score);
+    }
+
+    // 2. Calculate average
+    get_average() {
+        if (this.scores.length === 0) {
+            return 0;
+        }
+
+        const total = this.scores.reduce((sum, score) => sum + score, 0);
+        return total / this.scores.length;
+    }
+
+    //docstring
+    get_info() {
+        return `${this.name} - Average: ${this.get_average()}`;
+    }
 }
-
-const marks = [85, 90, 78, 92, 88];
-
-const average = calculateAverage(marks);
-
-console.log("Average Marks:", average.toFixed(2));
-
-document.getElementById("average").textContent = `Student Average: ${average}`;

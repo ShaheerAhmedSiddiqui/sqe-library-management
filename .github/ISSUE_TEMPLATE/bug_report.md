@@ -1,3 +1,11 @@
+---
+name: Bug Report
+about: Report a bug or unexpected problem
+title: ''
+labels: ''
+assignees: ''
+---
+
 # Bug Report
 
 ## Description
@@ -20,11 +28,10 @@
 
 ## Environment
 
-* Operating System:
-* Node.js Version:
-* npm Version:
-* Browser:
-* Project Version/Commit:
+- Operating System:
+- Node.js Version:
+- npm Version:
+- Browser:
 
 ## Severity
 

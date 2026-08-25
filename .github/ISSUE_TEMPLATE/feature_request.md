@@ -1,8 +1,16 @@
+---
+name: Feature Request
+about: Suggest an idea or improvement
+title: ''
+labels: ''
+assignees: ''
+---
+
 # Feature Request
 
 ## Problem
 
-<!-- Describe the problem this feature would solve. -->
+<!-- Describe the problem or need. -->
 
 ## Proposed Solution
 
@@ -10,4 +18,4 @@
 
 ## Alternatives Considered
 
-<!-- Describe alternative solutions or workarounds. -->
+<!-- Describe any alternative solutions you considered. -->

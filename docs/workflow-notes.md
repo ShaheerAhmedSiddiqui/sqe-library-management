@@ -57,3 +57,44 @@ The approved changes are released. QA performs final validation, regression test
 ## Summary
 
 QA is involved throughout the software development lifecycle rather than only at the final testing stage. Early QA involvement helps identify requirements, risks, defects, and missing tests before they become expensive to fix.
+
+
+## Task 4 — Commit Hygiene Audit
+
+### Last 10 Commits
+
+The following is the output of `git log --oneline -10`:
+
+2c1a350 (HEAD -> main, origin/main, origin/HEAD) refactor(student): rename rollNo to idNumber (#17)
+3923c4f Rename-field-a PR (#15)
+292651f Lab 1 (#14)
+4cb1417 Lab 1 (#13)
+03c354b Add config.yml to disable blank issues
+c74763d Add contributing guidelines for project workflow
+58927c1 Lab 1 Tasks work
+e10687c add file
+db871d9 Merge pull request #6 from ShaheerAhmedSiddiqui/add-student
+dee3ae2 (origin/add-student) Add docString
+
+### Weak commit #1
+3923c4f Rename-field-a PR (#15)
+
+### Weak commit #2
+e10687c add file
+
+
+### Commit Message Improvements
+
+### Weak commit #1
+# Original
+3923c4f Rename-field-a PR (#15)
+
+# Improved
+refactor(student): rename rollNo to studentId
+
+### Weak commit #2
+# Original
+e10687c add file
+
+# Improved
+ADD (Docs): Add CONTRIBUTING FILE and LICENSE FILE

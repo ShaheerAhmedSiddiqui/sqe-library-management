@@ -1,7 +1,7 @@
 class Student {
     constructor(name, rollNo) {
         this.name = name;
-        this.rollNo = rollNo;
+        this.studentId = rollNo;
         this.scores = [];
     }
 }

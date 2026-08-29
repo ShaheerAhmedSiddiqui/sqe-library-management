@@ -15,7 +15,7 @@ class Student {
 
     // 2. Calculate average
     get_average() {
-        if (this.scores.length === 0) {
+        if (!this.scores) {
             return 0;
         }
 

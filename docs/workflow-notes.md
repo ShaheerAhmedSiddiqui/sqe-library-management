@@ -98,3 +98,12 @@ e10687c add file
 
 # Improved
 ADD (Docs): Add CONTRIBUTING FILE and LICENSE FILE
+
+
+
+### Rebase Practice
+
+This section is for practicing interactive rebase.
+The purpose is to learn how to clean up commit history.
+Interactive rebase allows multiple commits to be combined.
+The final result should contain one clean commit.

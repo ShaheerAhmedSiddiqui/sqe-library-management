@@ -29,6 +29,7 @@ class Student {
 
         return total / this.scores.length;
     }
+    
 }
 
 module.exports = Student;

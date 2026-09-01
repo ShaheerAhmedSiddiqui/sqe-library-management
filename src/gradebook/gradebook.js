@@ -10,7 +10,7 @@ class Student {
             throw new TypeError("Score must be a number");
         }
 
-        if (score < 0 || score > 99) {
+        if (score < 0 || score > 100) {
             throw new RangeError("Score must be between 0 and 100");
         }
 

@@ -1,5 +1,4 @@
-const { Student, GradeBook } = require("./src/gradebook/gradebook");
-
+const { Student, GradeBook } = require("./gradebook/gradebook");
 // Create GradeBook
 const gradeBook = new GradeBook();
 

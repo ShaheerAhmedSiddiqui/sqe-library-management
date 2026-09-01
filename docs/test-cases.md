@@ -32,3 +32,42 @@ The following test cases verify the functional requirements of the GradeBook mod
 | REQ-7          | The system shall handle student names case-insensitively.                                |
 | REQ-8          | The system shall accept valid score boundary values from `0` through `100`.              |
 | REQ-9          | The system shall convert scores to grade letters according to the defined grading scale. |
+
+
+
+
+# Test Case Record
+### Manualy Execution of Test Cases
+
+| ID     | Title                        | Requirement | Preconditions  | Steps                  | Expected      | Priority | Type       | Result | Execution Note                                 | GitHub Issue |
+| ------ | ---------------------------- | ----------- | -------------- | ---------------------- | ------------- | -------- | ---------- | ------ | ---------------------------------------------- | ------------ |
+| TC-001 | Add valid score              | R1          | Student exists | Add 85                 | Score added   | High     | Functional | PASS   | Valid numeric score 85 was successfully added. | N/A          |
+| TC-002 | Reject negative score        | R2          | Student exists | Add -5                 | RangeError    | High     | Negative   | PASS   | Negative score was rejected.                   | N/A          |
+| TC-003 | Reject non-numeric score     | R3          | Student exists | Add `"85"`             | TypeError     | High     | Negative   | PASS   | Non-numeric score was rejected.                | N/A          |
+| TC-004 | Average with multiple scores | R4          | Scores exist   | Add 80, 90, 70         | Average = 80  | High     | Functional | PASS   | Average was correctly calculated.              | N/A          |
+| TC-005 | Average empty list           | R5          | No scores      | Call average           | 0             | Medium   | Boundary   | PASS   | Empty list returned 0.                         | N/A          |
+| TC-006 | Average single score         | R6          | Student exists | Add 75                 | Average = 75  | Medium   | Functional | PASS   | Single score average was correct.              | N/A          |
+| TC-007 | Duplicate roll number        | R7          | Student exists | Add duplicate roll     | Error         | High     | Negative   | PASS   | Duplicate roll number was rejected.            | N/A          |
+| TC-008 | Case-insensitive name        | R8          | Student exists | Search different cases | Student found | Medium   | Functional | PASS   | Case-insensitive search worked.                | N/A          |
+| TC-009 | Maximum score                | R9          | Student exists | Add 100                | Accepted      | High     | Boundary   | Fail   | Score 100 was not accepted.                        | N/A          |
+| TC-010 | Minimum score                | R10         | Student exists | Add 0                  | Accepted      | High     | Boundary   | PASS   | Score 0 was accepted.                          | N/A          |
+| TC-011 | Grade mid-range              | R11         | Student exists | Add 75                 | Grade C       | Medium   | Functional | PASS   | Score 75 returned C.                           | N/A          |
+| TC-012 | Grade boundary               | R12         | Student exists | Add 80                 | Grade B       | High     | Boundary   | PASS   | Score 80 returned B.                           | N/A          |
+
+
+
+# Execution Summary
+
+## Test Execution Summary
+
+| Metric | Result |
+|---|---:|
+| Total Test Cases | 12 |
+| Passed | 11 |
+| Failed | 1 |
+| Blocked | 0 |
+| Pass Rate | 100% |
+
+### Execution Status
+
+All planned test cases were executed manually using the Node.js interactive shell. The results were compared with the expected results defined for each test case. No Critical defects were identified during execution.

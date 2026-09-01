@@ -10,8 +10,8 @@ class Student {
             throw new TypeError("Score must be a number");
         }
 
-        if (score < 0) {
-            throw new RangeError("Score cannot be negative");
+        if (score < 0 || score > 100) {
+            throw new RangeError("Score must be between 0 and 100");
         }
 
         this.scores.push(score);
@@ -29,7 +29,60 @@ class Student {
 
         return total / this.scores.length;
     }
-    
+
+    gradeLetter() {
+        const average = this.average();
+
+        if (average >= 90) {
+            return "A";
+        }
+
+        if (average >= 80) {
+            return "B";
+        }
+
+        if (average >= 70) {
+            return "C";
+        }
+
+        if (average >= 60) {
+            return "D";
+        }
+
+        return "F";
+    }
 }
 
-module.exports = Student;
+
+class GradeBook {
+    constructor() {
+        this.students = [];
+    }
+
+    addStudent(student) {
+        const duplicate = this.students.some(
+            existingStudent => existingStudent.rollNo === student.rollNo
+        );
+
+        if (duplicate) {
+            throw new Error(
+                `Student with roll number ${student.rollNo} already exists`
+            );
+        }
+
+        this.students.push(student);
+    }
+
+    findStudentByName(name) {
+        return this.students.find(
+            student =>
+                student.name.toLowerCase() === name.toLowerCase()
+        );
+    }
+}
+
+
+module.exports = {
+    Student,
+    GradeBook
+};
